@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aurora - Home</title>
+    <link rel="stylesheet" href="styles/home.css" />
+    <link rel="icon" href="assets/icons/Auroralogo.png" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <img
+          src="assets/icons/Auroralogo.png"
+          alt="Logo"
+          class="nav-icon-left rounded-icon"
+        />
+        <!-- Curved Smiley icon -->
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="roadmap.html">Roadmap</a></li>
+          <li><a href="translator.html">Translator</a></li>
+        </ul>
+        <a href="index.html"
+          ><img
+            src="assets/icons/Homeicon.png"
+            alt="Home"
+            class="nav-icon-right rounded-icon"
+        /></a>
+        <!-- Curved Home icon -->
+      </nav>
+    </header>
+
+    <main class="home">
+      <div class="main-content">
+        <h1>AURORA</h1>
+        <p>Where Every Word Shines Bright</p>
+        <a href="roadmap.html" class="btn">Start Learning</a>
+
+        <!-- Scroll icon becomes a button -->
+        <button
+          class="scroll-icon"
+          onclick="document.getElementById('credits-section').scrollIntoView({behavior: 'smooth'});"
+        >
+          <img
+            src="assets/icons/Down arrow icon.png"
+            alt="Down Arrow"
+            class="icon"
+          />
+        </button>
+      </div>
+
+      <!-- Credits Section -->
+      <section id="credits-section" class="credits-section">
+        <h2>Contributors</h2>
+        <div class="card-container">
+          <!-- Example Contributor Card 1 -->
+          <div class="card">
+            <img
+              src="assets/icons/Auroralogo.png"
+              alt="Contributor 1"
+              class="card-img"
+            />
+            <h3>John Doe</h3>
+            <p>Lead Developer</p>
+            <p class="description">
+              Responsible for overseeing all development processes and coding
+              best practices.
+            </p>
+          </div>
+
+          <!-- Example Contributor Card 2 -->
+          <div class="card">
+            <img
+              src="assets/icons/Auroralogo.png"
+              alt="Contributor 2"
+              class="card-img"
+            />
+            <h3>Jane Smith</h3>
+            <p>UI/UX Designer</p>
+            <p class="description">
+              Specializes in creating user-friendly interfaces and crafting
+              intuitive user experiences.
+            </p>
+          </div>
+
+          <!-- Example Contributor Card 3 -->
+          <div class="card">
+            <img
+              src="assets/icons/Auroralogo.png"
+              alt="Contributor 3"
+              class="card-img"
+            />
+            <h3>Michael Brown</h3>
+            <p>Project Manager</p>
+            <p class="description">
+              Leads project planning and ensures all team members meet their
+              deadlines efficiently.
+            </p>
+          </div>
+
+          <!-- Example Contributor Card 4 -->
+          <div class="card">
+            <img
+              src="assets/icons/Auroralogo.png"
+              alt="Contributor 4"
+              class="card-img"
+            />
+            <h3>Emily Johnson</h3>
+            <p>Software Engineer</p>
+            <p class="description">
+              Develops critical application features and ensures system
+              scalability and stability.
+            </p>
+          </div>
+          <!-- Example Contributor Card 4 -->
+          <div class="card">
+            <img
+              src="assets/icons/Auroralogo.png"
+              alt="Contributor 4"
+              class="card-img"
+            />
+            <h3>Emily Johnson</h3>
+            <p>Software Engineer</p>
+            <p class="description">
+              Develops critical application features and ensures system
+              scalability and stability.
+            </p>
+          </div>
+          <!-- Example Contributor Card 4 -->
+          <div class="card">
+            <img
+              src="assets/icons/Auroralogo.png"
+              alt="Contributor 4"
+              class="card-img"
+            />
+            <h3>Emily Johnson</h3>
+            <p>Software Engineer</p>
+            <p class="description">
+              Develops critical application features and ensures system
+              scalability and stability.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

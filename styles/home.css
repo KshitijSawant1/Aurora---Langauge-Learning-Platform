@@ -1,0 +1,231 @@
+/* General styling remains the same */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  color: white;
+  text-align: center;
+  background-color: black;
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px 40px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-icon-left,
+.nav-icon-right {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; /* Rounded icons */
+  border: 2px solid white;
+}
+
+.nav-links {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  flex-grow: 1;
+  margin: 0;
+}
+
+.nav-links li {
+  margin: 0 40px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.nav-links a:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Active link styling */
+.nav-links a.active {
+  border-bottom: 2px solid white;
+}
+
+/* Main content styling */
+.main-content {
+  height: 100vh;
+  background: url("../assets/homebg.png") no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.main-content h1 {
+  font-size: 80px;
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+
+.main-content p {
+  font-size: 30px;
+  margin-top: 20px;
+  font-style: italic;
+}
+
+.btn {
+  margin-top: 40px;
+  padding: 15px 30px;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* Scroll icon */
+.scroll-icon {
+  position: absolute;
+  bottom: 180px;
+  font-size: 36px;
+  animation: bounce 2s infinite;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Smooth scrolling for credits link */
+.credits-link {
+  display: block;
+  margin-top: 30px;
+  font-size: 18px;
+  text-decoration: none;
+  color: white;
+}
+
+.credits-link:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Credits section */
+.credits-section {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 50px 20px;
+  color: white;
+  text-align: center;
+}
+
+.credits-section h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+/* Card container layout */
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Individual cards for contributors */
+.card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Hover effect for cards */
+}
+
+.card-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.8);
+}
+/* Scroll icon with animation */
+.scroll-icon {
+  position: absolute;
+  bottom: 150px;
+  font-size: 36px;
+  animation: bounce 2s infinite; /* Apply the bounce animation */
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Keyframe for bounce animation */
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0); /* Arrow stays in place at these times */
+  }
+  40% {
+    transform: translateY(-10px); /* Arrow moves up */
+  }
+  60% {
+    transform: translateY(-5px); /* Arrow moves slightly up */
+  }
+}
+/* Scroll icon with icon inside button */
+.scroll-icon {
+  position: absolute;
+  bottom: 150px;
+  background: none; /* Transparent background */
+  border: none; /* No border */
+  cursor: pointer;
+  padding: 0; /* Remove any padding */
+  outline: none; /* Remove the default button outline */
+}
+
+/* Size down the icon */
+.scroll-icon .icon {
+  width: 30px; /* Set the width to a smaller size */
+  height: 30px; /* Set the height to a smaller size */
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-icon:hover .icon {
+  opacity: 1; /* Increase opacity on hover */
+}

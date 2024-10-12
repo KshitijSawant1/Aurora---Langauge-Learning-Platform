@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aurora - Translator</title>
+    <link rel="stylesheet" href="styles/translator.css" />
+    <link rel="icon" href="assets/icons/Auroralogo.png" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <img
+          src="assets/icons/Auroralogo.png"
+          alt="Logo"
+          class="nav-icon-left rounded-icon"
+        />
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="roadmap.html">Roadmap</a></li>
+          <li><a href="translator.html" class="active">Translator</a></li>
+        </ul>
+        <a href="index.html"
+          ><img
+            src="assets/icons/Homeicon.png"
+            alt="Home"
+            class="nav-icon-right rounded-icon"
+        /></a>
+      </nav>
+    </header>
+
+    <main class="translator">
+      <div class="container">
+        <div class="language-box">
+          <select id="from-language" class="dropdown">
+            <option value="en">English</option>
+            <option value="fr">French</option>
+            <option value="es">Spanish</option>
+            <option value="de">German</option>
+          </select>
+          <textarea
+            class="text-area"
+            id="input-text"
+            placeholder="TYPE HERE"
+          ></textarea>
+          <button id="mic-btn" class="mic-btn">
+            <img src="assets/icons/Micicon.png" alt="Mic" />
+          </button>
+        </div>
+
+        <!-- Translate Button -->
+        <button class="translate-btn" id="translate-btn">Translate</button>
+
+        <div class="language-box">
+          <select id="to-language" class="dropdown">
+            <option value="fr">French</option>
+            <option value="en">English</option>
+            <option value="es">Spanish</option>
+            <option value="de">German</option>
+          </select>
+          <textarea
+            class="text-area"
+            id="output-text"
+            placeholder="TRANSLATE HERE"
+          ></textarea>
+          <button id="speak-btn" class="speak-btn">
+            <img src="assets/icons/Speakericon.png" alt="Speak" />
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <script src="scripts/translator.js"></script>
+  </body>
+</html>

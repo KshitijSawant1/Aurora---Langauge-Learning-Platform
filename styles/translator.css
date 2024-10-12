@@ -1,0 +1,150 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(to right, #9b59b6, #eae0f5);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px 40px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-icon-left,
+.nav-icon-right {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.nav-links {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  flex-grow: 1;
+  margin: 0;
+}
+
+.nav-links li {
+  margin: 0 40px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.nav-links a:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Active link styling */
+.nav-links a.active {
+  border-bottom: 2px solid white;
+}
+
+/* Translator section styling */
+.translator {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 100px);
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  max-width: 1200px;
+}
+
+.language-box {
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+  width: 40%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.dropdown {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 50px;
+  background-color: #6c5ce7;
+  color: white;
+  border: none;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.text-area {
+  width: 100%;
+  height: 200px;
+  border: none;
+  padding: 15px;
+  border-radius: 15px;
+  background-color: #f8f9fa;
+  font-size: 24px;
+  color: #4b4b4b;
+  font-family: "Arial", sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Translate Button */
+.translate-btn {
+  background-color: #6c5ce7;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  padding: 15px 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.translate-btn:hover {
+  background-color: #5b49d0;
+}
+
+/* Mic and Speaker Buttons */
+.mic-btn,
+.speak-btn {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.mic-btn img,
+.speak-btn img {
+  width: 40px;
+  height: 40px;
+}

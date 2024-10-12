@@ -1,0 +1,132 @@
+window.onload = function () {
+  loadTimeline("English"); // Load English by default
+};
+
+function loadTimeline(language) {
+  const timeline = document.getElementById("timeline");
+  let content = "";
+
+  switch (language) {
+    case "English":
+      content = generateTimelineContent(language, [
+        "Understand Basic Greetings and Introductions",
+        "Learn the Alphabet and Pronunciation",
+        "Understand Basic Grammar Concepts",
+        "Learn Common Vocabulary",
+        "Practice Simple Sentences",
+        "Learn to Use Articles (A, An, The)",
+        "Learn Present Tense Verbs",
+        "Practice Question Words",
+        "Learn Basic Conjunctions and Prepositions",
+        "Master Plurals and Countable/Uncountable Nouns",
+        "Understand Verb Conjugation in Past and Future",
+        "Learn Pronouns and Possessives",
+        "Focus on Listening Skills",
+        "Practice Writing Short Paragraphs",
+        "Learn English Idioms and Phrasal Verbs",
+        "Practice Conversation and Speaking",
+        "Understand Tenses and Complex Grammar",
+        "Learn Advanced Vocabulary and Expressions",
+        "Improve Reading Skills",
+        "Consistent Practice and Immersion",
+      ]);
+      break;
+    case "French":
+      content = generateTimelineContent(language, [
+        "French Node 1",
+        "French Node 2",
+        "French Node 3",
+        // Add all 20 nodes for French here
+      ]);
+      break;
+  }
+
+  timeline.innerHTML = content;
+  loadProgress(language);
+  addCollapsibleFeature(); // Ensure collapsible works after loading content
+}
+
+function generateTimelineContent(language, nodes) {
+  return nodes
+    .map(
+      (node, index) => `
+    <div class="milestone">
+      <button class="collapsible">${index + 1}. ${node}</button>
+      <div class="content">
+        <p>Details about ${node}.</p>
+        <input type="checkbox" class="progress-checkbox" id="${language}-node-${index}">
+      </div>
+    </div>
+  `
+    )
+    .join("");
+}
+
+function loadProgress(language) {
+  const checkboxes = document.querySelectorAll(".progress-checkbox");
+  const totalTasks = checkboxes.length;
+
+  checkboxes.forEach((checkbox) => {
+    const id = checkbox.id;
+    const isChecked = localStorage.getItem(id) === "true";
+    checkbox.checked = isChecked;
+
+    checkbox.addEventListener("change", () => {
+      localStorage.setItem(id, checkbox.checked);
+      calculateProgress(language, totalTasks);
+    });
+  });
+
+  calculateProgress(language, totalTasks); // Calculate progress initially
+}
+
+function calculateProgress(language, totalTasks) {
+  const checkboxes = document.querySelectorAll(
+    `.progress-checkbox[id^="${language}"]`
+  );
+  let completedTasks = 0;
+
+  checkboxes.forEach((checkbox) => {
+    if (checkbox.checked) {
+      completedTasks++;
+    }
+  });
+
+  const progressPercent = (completedTasks / totalTasks) * 100;
+  updateCharts(progressPercent); // Update the charts with the progress percentage
+}
+
+function updateCharts(progressPercent) {
+  // Update the Bar and Pie charts with the progress percentage
+  barChart.data.datasets[0].data = [progressPercent];
+  barChart.update();
+
+  pieChart.data.datasets[0].data = [progressPercent, 100 - progressPercent];
+  pieChart.update();
+
+  // Optional: Track progress over time in the Radar chart
+  radarChart.update(); // Update the radar chart with new data
+}
+
+function addCollapsibleFeature() {
+  const coll = document.getElementsByClassName("collapsible");
+  for (let i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      const content = this.nextElementSibling;
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      }
+    });
+  }
+}
+
+
+
+
+
+
+
+        <div style="padding: 60px"></div>

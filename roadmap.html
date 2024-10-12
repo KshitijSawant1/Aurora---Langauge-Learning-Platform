@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aurora - Roadmap</title>
+    <link rel="stylesheet" href="styles/roadmap.css" />
+    <link rel="icon" href="assets/icons/Auroraicon.ico" type="image/x-icon" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <img
+          src="assets/icons/Auroralogo.png"
+          alt="Logo"
+          class="nav-icon-left"
+        />
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="roadmap.html" class="active">Roadmap</a></li>
+          <li><a href="translator.html">Translator</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="roadmap">
+      <!-- Sidebar for statistics -->
+      <div class="sidebar">
+        <div style="padding: 60px"></div>
+        <h3>Your Progress</h3>
+        <canvas id="progressBarChart" width="200" height="200"></canvas>
+        <canvas
+          id="progressPieChart"
+          width="200"
+          height="200"
+          style="margin-top: 20px"
+        ></canvas>
+        <!-- Radar Chart to replace the Line chart -->
+      </div>
+      <div class="roadmap-content">
+        <div style="padding: 60px"></div>
+        <div class="language-options">
+          <button onclick="loadTimeline('English')">English</button>
+          <button onclick="loadTimeline('French')">French</button>
+          <button onclick="loadTimeline('Spanish')">Spanish</button>
+          <button onclick="loadTimeline('German')">German</button>
+        </div>
+
+        <!-- Timeline -->
+        <div class="timeline" id="timeline">
+          <!-- Timeline content will be injected here -->
+        </div>
+      </div>
+    </main>
+
+    <script src="scripts/timeline.js"></script>
+    <script>
+      // Chart initialization for Bar, Pie, and Radar charts
+      let barCtx = document.getElementById("progressBarChart").getContext("2d");
+      let pieCtx = document.getElementById("progressPieChart").getContext("2d");
+
+      const barChart = new Chart(barCtx, {
+        type: "bar",
+        data: {
+          labels: ["Progress"],
+          datasets: [
+            {
+              label: "Completion (%)",
+              data: [0], // Initial values
+              backgroundColor: "rgba(75, 192, 192, 0.2)",
+              borderColor: "rgba(75, 192, 192, 1)",
+              borderWidth: 1,
+            },
+          ],
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+              max: 100,
+            },
+          },
+          plugins: {
+            legend: {
+              onClick: null, // Disable click on legend items
+            },
+          },
+        },
+      });
+
+      const pieChart = new Chart(pieCtx, {
+        type: "pie",
+        data: {
+          labels: ["Completed", "Remaining"],
+          datasets: [
+            {
+              data: [0, 100],
+              backgroundColor: [
+                "rgba(75, 192, 192, 0.6)",
+                "rgba(255, 99, 132, 0.6)",
+              ],
+              borderWidth: 1,
+            },
+          ],
+        },
+        options: {
+          plugins: {
+            legend: {
+              onClick: null, // Disable click on legend items
+            },
+          },
+        },
+      });
+      // Function to update both Bar and Pie charts
+      function updateCharts(progressPercent) {
+        barChart.data.datasets[0].data = [progressPercent];
+        barChart.update();
+
+        pieChart.data.datasets[0].data = [
+          progressPercent,
+          100 - progressPercent,
+        ];
+        pieChart.update();
+      }
+    </script>
+  </body>
+</html>
