@@ -2,14 +2,6 @@ window.onload = function () {
   loadTimeline("English"); // Load English by default
 };
 
-let radarData = {
-  Vocabulary: 0,
-  Grammar: 0,
-  Reading: 0,
-  Speaking: 0,
-  Listening: 0,
-};
-
 function loadTimeline(language) {
   const timeline = document.getElementById("timeline");
   let content = "";
@@ -37,6 +29,30 @@ function loadTimeline(language) {
         "Learn Advanced Vocabulary and Expressions",
         "Improve Reading Skills",
         "Consistent Practice and Immersion",
+      ]);
+      break;
+    case "Hindi":
+      content = generateTimelineContent(language, [
+        "बुनियादी अभिवादन और परिचय को समझें",
+        "वर्णमाला और उच्चारण सीखें",
+        "बुनियादी व्याकरण अवधारणाओं को समझें",
+        "सामान्य शब्दावली सीखें",
+        "सरल वाक्यों का अभ्यास करें",
+        "अनुच्छेदों (ए, एन, द) का उपयोग करना सीखें",
+        "वर्तमान काल की क्रियाएँ सीखें",
+        "प्रश्न शब्दों का अभ्यास करें",
+        "बुनियादी संयोजन और पूर्वसर्ग सीखें",
+        "मास्टर बहुवचन और गणनीय/बेशुमार संज्ञाएँ",
+        "अतीत और भविष्य में क्रिया संयुग्मन को समझें",
+        "सर्वनाम और स्वामित्व सीखें",
+        "सुनने के कौशल पर ध्यान दें",
+        "छोटे अनुच्छेद लिखने का अभ्यास करें",
+        "अंग्रेजी मुहावरे और वाक्यांश क्रियाएँ सीखें",
+        "बातचीत और बोलने का अभ्यास करें",
+        "काल और जटिल व्याकरण को समझें",
+        "उन्नत शब्दावली और अभिव्यक्तियाँ सीखें",
+        "पढ़ने के कौशल में सुधार करें",
+        "निरंतर अभ्यास और विसर्जन",
       ]);
       break;
     case "French":
@@ -108,7 +124,7 @@ function loadTimeline(language) {
         "Zeitformen und komplexe Grammatik verstehen",
         "Lernen Sie fortgeschrittene Vokabeln und Ausdrücke",
         "Lesefähigkeiten verbessern",
-        "Konsequentes Üben und Eintauchen"
+        "Konsequentes Üben und Eintauchen",
       ]);
       break;
   }
