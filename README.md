@@ -2,7 +2,7 @@
 
 Aurora is an innovative language learning platform crafted to enhance language acquisition through interactive tools, translation capabilities, and visual learning paths. The platform is designed to support learners in mastering languages with ease and engagement. With features like translation, progress tracking, and a roadmap visualization, Aurora currently supports translations across five languages: English, French, Spanish, German, and Hindi.
 
-##Quick Access Link : https://aurora-langauge-learning-app.netlify.app/
+### Quick Access Link : https://aurora-langauge-learning-app.netlify.app/
 ---
 
 ## Table of Contents
