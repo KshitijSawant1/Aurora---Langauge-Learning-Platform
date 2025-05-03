@@ -120,21 +120,12 @@ The translator page allows users to:
 
 ---
 
-## 6. Contributors
+## 📬 Contact
 
-This project was made possible by a collaborative team of dedicated contributors:
-
-- **KS** - Lead Developer
-- **PS** - UI/UX Designer
-- **SP** - Project Manager
-- **CHS** - Software Engineer
-- **BG** - Data Scientist
-- **OSA** - Quality Assurance Lead
-- **JD** - DevOps Engineer
-- **MZ** - Product Manager
-
-<img width="1097" alt="image" src="https://github.com/user-attachments/assets/e09d1eb4-844a-4ced-8509-01fd55b569c0">
+* **Name:** Kshitij K Sawant
+* **LinkedIn:** [linkedin.com/in/kshitijksawant](https://www.linkedin.com/in/kshitijksawant)
+* **GitHub:** [github.com/KshitijSawant1](https://github.com/KshitijSawant1)
+* **LinkTree:** [linktr.ee/kshitijksawant](https://linktr.ee/kshitijksawant)
 
 ---
-
 Thank you for exploring Aurora! We hope this platform illuminates your language learning journey, making each word shine bright.
